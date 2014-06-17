@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.28)  17 JUN 2014 08:39
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.28)  17 JUN 2014 08:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1187,16 +1187,16 @@ LaTeX Warning: Reference `abb1' on page 1 undefined on input line 46.
 
 ]
 
-LaTeX Warning: Reference `abb2' on page 2 undefined on input line 91.
+LaTeX Warning: Reference `abb2' on page 2 undefined on input line 94.
 
 
-Overfull \hbox (14.2557pt too wide) in paragraph at lines 91--92
+Overfull \hbox (14.2557pt too wide) in paragraph at lines 94--95
 \OT1/cmr/m/n/10.95 Eine Skizze des Ver-such-sauf-baus ist in Ab-bil-dung ([]) g
 ezeigt. Auf einer Schiene mit L^^?angenskala
  []
 
 [2]
-Overfull \hbox (5.73906pt too wide) in paragraph at lines 120--121
+Overfull \hbox (5.73906pt too wide) in paragraph at lines 123--124
 \OT1/cmr/m/n/10.95 Die an den Einzelspal-ten gemesse-nen Werte befinden sich in
  Tabelle 2. Von diesen Stromst^^?arken
  []
@@ -1204,10 +1204,10 @@ Overfull \hbox (5.73906pt too wide) in paragraph at lines 120--121
 <plot0.png, id=24, 578.16pt x 433.62pt>
 File: plot0.png Graphic file (type png)
  <use plot0.png>
-Package pdftex.def Info: plot0.png used on input line 135.
+Package pdftex.def Info: plot0.png used on input line 138.
 (pdftex.def)             Requested size: 462.52863pt x 346.89647pt.
 
-Overfull \hbox (19.87488pt too wide) in paragraph at lines 135--136
+Overfull \hbox (19.87488pt too wide) in paragraph at lines 138--139
  [][] 
  []
 
@@ -1217,23 +1217,23 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <plot1.png, id=26, 578.16pt x 433.62pt>
 File: plot1.png Graphic file (type png)
  <use plot1.png>
-Package pdftex.def Info: plot1.png used on input line 142.
+Package pdftex.def Info: plot1.png used on input line 145.
 (pdftex.def)             Requested size: 462.52863pt x 346.89647pt.
 
-Overfull \hbox (19.87488pt too wide) in paragraph at lines 142--143
+Overfull \hbox (19.87488pt too wide) in paragraph at lines 145--146
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<plot2.png, id=27, 578.16pt x 433.62pt>
+[3] <plot2.png, id=31, 578.16pt x 433.62pt>
 File: plot2.png Graphic file (type png)
  <use plot2.png>
-Package pdftex.def Info: plot2.png used on input line 180.
+Package pdftex.def Info: plot2.png used on input line 183.
 (pdftex.def)             Requested size: 462.52863pt x 346.89647pt.
 
-Overfull \hbox (19.87488pt too wide) in paragraph at lines 180--181
+Overfull \hbox (19.87488pt too wide) in paragraph at lines 183--184
  [][] 
  []
 
@@ -1243,26 +1243,25 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[3] <plot4.png, id=32, 578.16pt x 433.62pt>
+[4 <./plot0.png>] <plot4.png, id=36, 578.16pt x 433.62pt>
 File: plot4.png Graphic file (type png)
  <use plot4.png>
-Package pdftex.def Info: plot4.png used on input line 195.
+Package pdftex.def Info: plot4.png used on input line 198.
 (pdftex.def)             Requested size: 462.52863pt x 346.89647pt.
 
-Overfull \hbox (19.87488pt too wide) in paragraph at lines 195--196
+Overfull \hbox (19.87488pt too wide) in paragraph at lines 198--199
  [][] 
  []
 
-[4 <./plot0.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 211.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 214.
 
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 211.
-
-[5 <./plot1.png>] [6 <./plot2.png>] [7 <./plot4.png>] (./protokoll406.aux)
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 214.
+ [5 <./plot1.png>]
+[6] [7 <./plot2.png>] [8 <./plot4.png>] (./protokoll406.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1273,7 +1272,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  12299 strings out of 493304
  247835 string characters out of 6139871
- 261683 words of memory out of 5000000
+ 258683 words of memory out of 5000000
  15528 multiletter control sequences out of 15000+600000
  15304 words of font info for 59 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -1292,10 +1291,10 @@ mr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on protokoll406.pdf (8 pages, 325989 bytes).
+Output written on protokoll406.pdf (9 pages, 326705 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
+ 103 PDF objects out of 1000 (max. 8388607)
+ 68 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
