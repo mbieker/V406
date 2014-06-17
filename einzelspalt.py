@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 from copy import *
 thermal_current = 9e-12 # Thermischer Dunkelstrom
-distance  = 1  # Abstand Gitter - Photodiode
+distance  = 1.205  # Abstand Gitter - Photodiode
 
 
 #Auswertung der Mikroskopischen UNtersuchung
@@ -60,7 +60,7 @@ for filename in ['dataA','dataB','dataC']:
         A = np.sqrt(max_intensity/(4*b[i]**2))
         params , cov = curve_fit(fit_2,angle ,intensity, (A,b[i],g))
         theo_intensity = fit_2(phi,params[0],params[1],params[2])
-        plt.close()
+    plt.close()
     plt.plot(phi,theo_intensity, label ="Fit")
     print params       
 
