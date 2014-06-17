@@ -66,10 +66,28 @@ Durch Integration und Ausklammern ergibt sich über die Eulersche Formel
 \end{equation}
 der folgende Ausdruck:
 \begin{equation}
-B (z,t,\phi) = A_0 e^{i\left( wt- \frac{2 \pi z}{\lambda}\right)} e^{\left( \frac{\pi i b \sin \phi}{\lambda}\right)} \frac{\lambda}{\pi \sin \phi} \sin \left( \frac{\pi b \sin \phi}{\lambda} \right)
+B (z,t,\phi) = A_0 e^{i\left( wt- \frac{2 \pi z}{\lambda}\right)} e^{\left( \frac{\pi i b \sin \phi}{\lambda}\right)} \frac{\lambda}{\pi \sin \phi} \sin \left( \frac{\pi b \sin \phi}{\lambda} \right).
+\label{formela}
 \end{equation}
+Die Intensität des am Einfachspalt gebeugten Lichtes wird beschrieben durch
+\begin{equation}
+I (\phi) \propto B (\phi)^2 = A_0^2 b^2 \left ( \frac {\lambda}{\pi b \sin \phi} \right) ^2 \cdot \sin^2 \left( \frac{\pi b \sin \phi}{\lambda} \right).
+\label{formeli}
+\end{equation}
+Die durch Formel (\ref{formeli}) beschriebene Beugungsfigur besitzt bei den Nulldurchgängen von Formel (\ref{formela}) Minima.
 \subsection{Beugung am Doppelspalt}
+Die Intensitätsverteilung I $(\phi)$ lässt sich analog zum Einfachspalt berechnen. Die Beugungsfigur des Doppelspaltes wird behandelt als Überlagerung zweier Einfachspalte, die den Abstand s zueinander besitzen.
+Für die Intensitätsverteilung ergibt sich
+\begin{equation}
+I (\phi) \propto B(\phi)^2 = 4 \cos^2 \left( \frac{\pi s \sin \phi}{\lambda} \right) \cdot \left( \frac{\lambda}{\pi b \sin \phi} \right)^2 \cdot \sin^2 \left( \frac{\pi b \sin \phi}{\lambda} \right).
+\end{equation}
+Diese Intensitätsverteilung wird berechnet auf Grundlage der Intensitätsverteilung des Einfachspaltes (Formel (\ref{formeli})) und einer $\cos^2$-Verteilung. Es ergeben sich zusätzliche Minima an den Stellen
+\begin{equation}
+\phi(k) = \arcsin \left( \frac{2k+1}{2s} \right) \cdot \lambda,
+\end{equation}
+also an den Nullstellen der $\cos^2$-Verteilung.
 \subsection{Fraunhofersche Beugung und Fourier-Transformation}
+
 \section{Aufbau}
 Eine Skizze des Versuchsaufbaus ist in Abbildung (\ref{abb2}) gezeigt. Auf einer Schiene mit Längenskala sind ein He-Ne-Laser, eine Halterung für den Spalt und die verschiebbare Photodiode befestigt. Der Laser leuchtet auf den Spalt, der zwischen dem Laser und der Photodiode befestigt ist. Die Photodiode kann mit einer Auflösung von $\SI{1/100}{\milli \meter}$ über eine Strecke von \SI{5}{\centi \meter} verschoben werden. Die Photodiode ist an einem empfindlichen Amperemeter angeschlossen.
 \section{Durchführung}
@@ -175,7 +193,7 @@ A_0 = \sqrt{\frac{I_{Max}}{4\cdot b^2}}\rm.
 Die Ergebnisse der Regression befinden sich in Tabelle 5. Um einen Vergleich zwischen Beugung am Einzel und am Doppelspalt zu ermöglichen zeigt Abbildung \ref{plot3} beide Beugungsmuster. Die Amplituden sind dabei jeweils auf das 0. Maximum normalisiert. 
 \begin{figure}[htp]
 \centering
-\includegraphics[scale=0.8]{/home/martin/Dokumente/SS14/Praktikum/V406/plot4.png}
+\includegraphics[scale=0.8]{plot4.png}
 \caption{Vergleich zwischen Beugung am Doppelspalt und Beugung am Einzelspalt mit näherungsweise gleicher Spaltbreite $b$.}
 \label{plot3}
 \end{figure}
