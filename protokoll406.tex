@@ -14,6 +14,7 @@
 \usepackage{selinput}
 \usepackage[separate-uncertainty=true]{siunitx}
 \usepackage{booktabs}
+
 \sisetup{}
 \SelectInputMappings{%
 adieresis={ä},
@@ -81,11 +82,93 @@ Einzelspalt B & 3.8  &1.34e-4 &&\\
 Doppelspalt   & 4.6  & 1.63e-4&20.8&7.35e-4\\
 \bottomrule
 \end{tabular}
+\caption{Ergebnisse der Mikroskopischen Untersuchung}
 \end{table}
 
 
-\subsection{Beungungsmuster am Einzelspalt}
+\subsection{Beugungsmuster am Einzelspalt}
+
+Die an den Einzelspalten gemessenen Werte befinden sich in Tabelle 2. Von diesen Stromstärken muss noch der so genannte thermische Dunkelstrom 
+\[
+I_D = \SI{}{\nano\ampere}
+\]
+abgezogen werden. Um die Messwerte mit der Theorie vergleichen zu können, werden die gemessenen Strecken $x$ um die Position des 0. Maximums zentriert und in einen Winkel $\phi$ umgerechnet. Dabei gilt der Zusammenhang
+\[
+\varphi \approx \frac{x-x_0}{L}
+\] 
+Der Abstand zwischen Schirm und Beugungsebene beträgt
+\[
+L = \SI{}{\meter} \mathrm{.}
+\]
+Diese Winkel und die korrigierten Stromstärken befinden sich ebenfalls in Tabelle 2. Die Abbildungen \ref{plot0} und  \ref{plot1} zeigen den Photostrom in Abhängigkeit von $\varphi$.
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.8]{plot0.png}
+\caption{Beugungsmuster des Einzelspalts A ($b \approx \SI{}{\milli\meter}$)}
+\label{plot0}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.8]{plot1.png}
+\caption{Beugungsmuster des Einzelspalts B ($b \approx \SI{}{\milli\meter}$)}
+\label{plot1}
+\end{figure}
+
+\noindent
+An diese Werte wird nun die Formel 
+\begin{equation}
+I(\varphi) = A_0^2b^2\operatorname{sinc}^2\left( \frac{b\cdot\sin{\varphi}}{\lambda}\right)
+\end{equation}
+Die Wellenlänge des verwendeten HeNe-Lasers beträgt
+\[
+\lambda = \SI{633}{\nano\meter}\rm.
+\] 
+Die nichtlineare Ausgleichsrechnung wurde mit \textsc{Python} durchgeführt. Für die Regressionsparameter $A_0$ und $b$ müssen dabei Startwerte angegeben werden. Für die Spaltbreite wurde dabei die im vorherigen Abschnitt mit dem Mikroskop gemessenen Werte verwendet. Der Amplitudenfaktor wurde aus dem Photostrom des 0. Maximums berechnet:
+\[
+A_0= \sqrt{\frac{I_{Max}}{b^2}}\rm.
+\] 
+Die Ergebnisse der Regression finden sich in Tabelle 3 und die Ausgleichsfunktionen sind in den Abbildungen zu finden.
 \subsection{Beugungsmuster am Doppelspalt}
+
+Die Berechnung des Photostroms $I_ph$ und des Beugungswinkels $\varphi$ wurden analog zum vorherigen Abschnitt durchgeführt. Die Ergebnisse befinden sich in Tabelle 4.
+\begin{table}[h]
+\centering
+\begin{tabular}{lSS}
+
+\toprule
+&$\frac{A_0}{\si{\nano\ampere\per\meter\squared}}$ &$\frac{g}{\si{\meter}}$\\
+\midrule
+Einzelspalt A & 1.9  &6.71e-5 \\
+Einzelspalt B & 3.8  &1.34e-4 \\
+\bottomrule
+\end{tabular}
+\caption{Regressionsergebnisse der Einzelspalte}
+\end{table}
+ Abbildung \ref{plot3} zeigt den Photostrom in Abhängigkeit von $\varphi$ 
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.8]{plot2.png}
+\caption{Beugungsmuster des Doppelspalts ($b \approx \SI{}{\milli\meter}$ und $g\approx \SI{}{\milli\meter} $)}
+\label{plot0}
+\end{figure} 
+An diese Messwerte soll die Theoriefunktion
+\begin{equation}
+I(\varphi) = 4 \cdot A_0^2\cdot b^2\cos^2\left(\frac{\pi\cdot g \cdot \sin \varphi}{\lambda}\right)\cdot \operatorname{sinc}^2\left( \frac{b\cdot\sin{\varphi}}{\lambda}\right) 
+\end{equation}
+angepasst. Analog zum Vorgehen beim Einzelspalt werde als Startwerte für die Regressionsparameter $g$ und $b$ die mikroskopisch bestimmten Messergebnisse verwendet. Für den Amplitudenfaktor gilt:
+\[
+A_0 = \sqrt{\frac{I_{Max}}{4\cdot b^2}}\rm.
+\]
+Die Ergebnisse der Regression befinden sich in Tabelle 5. Um einen Vergleich zwischen Beugung am Einzel und am Doppelspalt zu ermöglichen zeigt Abbildung \ref{plot3} beide Beugungsmuster. Die Amplituden sind dabei jeweils auf das 0. Maximum normalisiert. 
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.8]{/home/martin/Dokumente/SS14/Praktikum/V406/plot4.png}
+\caption{Vergleich zwischen Beugung am Doppelspalt und Beugung am Einzelspalt mit näherungsweise gleicher Spaltbreite $b$.}
+\label{plot3}
+\end{figure}
+
+\subsection{}
 \section{Diskussion}
 
 \section{Quellen}
