@@ -1,7 +1,8 @@
 import numpy as np
+from math import floor, log10
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
-from copy import *
+from copy import copy
 thermal_current = 9e-12 # Thermischer Dunkelstrom
 distance  = 1.205  # Abstand Gitter - Photodiode
 
@@ -15,8 +16,49 @@ g = 20.8 *scaling_factor
 print "Messwerte Mikroskop:"
 print b,g
 print "##########"
-#Daten der Einzelspalte fitten
-'Funktionen fuer Fit definieren'
+
+
+def make_LaTeX_table(data,header, flip= 'false', onedim = 'false'):
+    output = '\\begin{longtable}{'
+    #Get dimensions
+    if(onedim == 'true'):
+        if(flip == 'false'):
+        
+            data = np.array([[i] for i in data])
+        
+        else:
+            data = np.array([data])
+    
+    row_cnt, col_cnt = data.shape
+    header_cnt = len(header)
+    
+    if(header_cnt == col_cnt and flip== 'false'):
+        #Make Format
+        
+        for i in range(col_cnt):
+            output += 'l'
+        output += '}\n\\toprule\n{'+ header[0]
+        for i in range (1,col_cnt):
+            output += '} &{ ' + header[i]
+        output += ' }\\\\\n\\midrule\n'
+        for i in data:
+            if(isinstance(i[0],(int,float))):
+                output +=  "%.3f" %  i[0]  
+            else:
+                output += ' ${:L}$ '.format(i[0])
+            for j in range(1,col_cnt):
+                if(isinstance(i[j],(int,float))):
+                    output += ' & ' + "%.3g" % i[j]  
+                else:          
+                    output += ' & ${:L}$ '.format(i[j])                
+                
+            output += '\\\\\n'
+        output += '\\bottomrule\n\\caption{Blub}\n\\end{longtable}\n'
+                            
+        return output
+
+    else:
+        return 'ERROR'
 
 
 
@@ -44,7 +86,11 @@ for filename in ['dataA','dataB','dataC']:
     max_intensity = intensity[max_index]
     angle = (displacement - max_location)/distance
     
-    
+    #print "## Werte fuer " + str(i) + " als Tabelle: ##"
+    #data = np.array([displacement,current, angle ,intensity])
+    #header = [r'$x\,\si{\per\meter}$', r'$I\,\si{\per\ampere}$', r'$\varphi$', r'$I_{Ph}\,\si{\per\ampere}$']
+    #print make_LaTeX_table(data.T,header)
+
     "Curve-Fit fuer Formel 5"  
     phi = np.linspace(angle[0]*0.9,angle[-1]*1.1,1000)   
     if i < 2:
