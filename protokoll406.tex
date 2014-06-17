@@ -44,8 +44,20 @@ germandbls={ß},
 Im folgenden Versuch wird die Beugung von Licht an Einzelspalten und einem Doppelspalt untersucht. Unter Beugung versteht man die Abweichung der Ausbreitung von Licht hinter kleinen Öffnungen von den Gesetzen der geometrischen Optik.
 \section{Theorie}
 Im Fall der Beugung muss Licht als Welle betrachtet werden. Beugungphänomene können dann z.B. mit dem Huygensschen Prinzip und dem Interferenzprinzip erklärt werden. 
+<<<<<<< HEAD
 \subsection{Beugung am Einzelspalt}
 Es sind zwei Formen der Beugung zu unterscheiden: Die Fresnel-Beugung und die Fraunhofer-Beugung (Abbildung \ref{abb1}).\newline
+=======
+\subsection{Beugung am Einfach-Spalt}
+Es sind zwei Formen der Beugung zu unterscheiden: Die Fresnel-Beugung und die Fraunhofer-Beugung (Abbildung \ref{abb1}).
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{abb1.png}
+\caption{Fresnel- und Fraunhofer-Beugung [1]}
+\label{abb1}
+\end{figure}
+\noindent
+>>>>>>> 1578c2609d34e0a9d1c5bd19f712e3f3e6452379
 Bei der Fresnel-Beugung befinden sich die Lichtquelle und der Beobachtungspunkt (Schirm) im Endlichen. Dabei interferieren im Beobachtungspunkt Strahlen, die unter verschiedenen Winkeln gebeugt wurden. Bei der Fraunhofer-Beugung liegt die Lichtquelle im Unendlichen, d.h. es werden parallele Strahlenbündel emittiert. Mathematisch ist der zweite Fall viel einfacher zu behandeln, auf die Fresnel-Beugung soll hier nicht weiter eingegangen.
 Der Länge des verwendete Spaltes beträgt ein Vielfaches der Breite, sodass nur ein eindimensionales Beugungsbild entsteht.
 Es fällt eine ebene Welle mit der Feldstärke
@@ -64,7 +76,31 @@ B (z, t, \phi) = A_0
 \end{equation}
 \subsection{Beugung am Doppelspalt}
 \subsection{Fraunhofersche Beugung und Fourier-Transformation}
+
+Bei der Fraunhoferschen Beugung ist die Amplitudenverteilung auch auf allgemeine Weise möglich. B$(\phi)$ lässt sich als Fourier-Transformierte der Amplitudenverteilung der einfallenden Welle auffassen. Bei der Amplitudenverteilung handelt es sich hier um die Verteilung in der eugungsebene.
+\newline
+Die Fourier-Transformation formuliert das Huygenssche Prinzip mathematisch. Auch Beugung an zweidimensionalen Objekten lässt sich mit Hilfe der Fourier-Transformation einfach berechnen.
 \section{Aufbau}
+Eine Skizze des Versuchsaufbaus ist in Abbildung (\ref{abb2}) gezeigt.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.35]{abb2.png}
+\caption{Versuchsaufbau [1]}
+\label{abb2}
+\end{figure}
+\noindent Auf einer Schiene mit Längenskala sind ein He-Ne-Laser, eine Halterung für den Spalt und die verschiebbare Photodiode befestigt. Der Laser leuchtet auf den Spalt, der zwischen dem Laser und der Photodiode befestigt ist. Die Photodiode kann mit einer Auflösung von $\SI{1/100}{\milli \meter}$ über eine Strecke von \SI{5}{\centi \meter} verschoben werden. Die Photodiode ist an einem empfindlichen Amperemeter angeschlossen.
+\section{Durchführung}
+Vor den Messungen wird das Beugungsobjekt so ausgerichtet, dass das Hauptmaximum möglichst mittig im Messbereich liegt und beide Nebenmaxima erster Ordnung ungefähr die gleiche Intensität haben.
+\subsection{Messung des Dunkelstroms}
+Die Photodiode gibt auch im unbelichteten Zustand einen (thermischen) Dunkelstrom $I_{du}$ ab, der das Messergebnis insbesondere bei der Messung geringer Intensitäten deutlich beeinflussen kann. Daher muss der Dunkelstrom vor der Versuchsdurchführung bei abgedeckter Photodiode gemessen werden.
+\subsection{Messungen mit dem Einfach-Spalt}
+Bei dem ersten Einzelspalt ($b=\SI{0.075}{\milli \meter}$) soll dessen Beugungsfigur punktweise ausgemessen werden. Die Schrittweite beträgt dabei $\SI{1}{\milli \meter}$. Darüber hinaus soll die verwendete Spaltbreite mit einem Mikroskop vermessen werden. Das Mikroskop wird zunächst geeicht, dafür wird ein Objektmikrometer (Objektträger mit eingeätzter linearer Skala) vermessen.
+\newline
+Anschließend wird ein weiterer Spalt ($b=\SI{0.15}{\milli \meter}$) vermessen. Die Schrittweite soll um das Hauptmaximum herum erhöht werden.
+\subsection{Messung am Doppelspalt}
+Der Doppelspalt ($b=\SI{0.15}{\milli \meter}, g=\SI{0.25}{\milli \meter}$) wird mit einer Schrittweite von $\SI{1}{\milli \meter}$ vermessen, um das Hauptmaximum herum wird die Schrittweite auf $\SI{0.2}{\milli \meter}$ verringert.
+
+
 \section{Auswertung}
 \subsection{Mikroskopische Vermessung der Spalte}
 Das in diesem Versuch zur Vermessung der Beugungsobjekte verwendete Mikroskop besitzt eine willkürlich unterteilte Skala. Daher muss dieses zunächst mit Hilfe eines Objektmikrometers geeicht werden. Als Umrechnungsfaktor $f$ ergibt sich:
@@ -84,7 +120,7 @@ Einzelspalt B & 3.8  &1.34e-4 &&\\
 Doppelspalt   & 4.6  & 1.63e-4&20.8&7.35e-4\\
 \bottomrule
 \end{tabular}
-\caption{Ergebnisse der Mikroskopischen Untersuchung}
+\caption{Ergebnisse der mikroskopischen Untersuchung}
 \end{table}
 
 
