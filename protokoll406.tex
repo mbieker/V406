@@ -44,6 +44,10 @@ germandbls={ß},
 Im folgenden Versuch wird die Beugung von Licht an Einzelspalten und einem Doppelspalt untersucht. Unter Beugung versteht man die Abweichung der Ausbreitung von Licht hinter kleinen Öffnungen von den Gesetzen der geometrischen Optik.
 \section{Theorie}
 Im Fall der Beugung muss Licht als Welle betrachtet werden. Beugungphänomene können dann z.B. mit dem Huygensschen Prinzip und dem Interferenzprinzip erklärt werden. 
+<<<<<<< HEAD
+\subsection{Beugung am Einzelspalt}
+Es sind zwei Formen der Beugung zu unterscheiden: Die Fresnel-Beugung und die Fraunhofer-Beugung (Abbildung \ref{abb1}).\newline
+=======
 \subsection{Beugung am Einfach-Spalt}
 Es sind zwei Formen der Beugung zu unterscheiden: Die Fresnel-Beugung und die Fraunhofer-Beugung (Abbildung \ref{abb1}).
 \begin{figure}[H]
@@ -53,6 +57,7 @@ Es sind zwei Formen der Beugung zu unterscheiden: Die Fresnel-Beugung und die Fr
 \label{abb1}
 \end{figure}
 \noindent
+>>>>>>> 1578c2609d34e0a9d1c5bd19f712e3f3e6452379
 Bei der Fresnel-Beugung befinden sich die Lichtquelle und der Beobachtungspunkt (Schirm) im Endlichen. Dabei interferieren im Beobachtungspunkt Strahlen, die unter verschiedenen Winkeln gebeugt wurden. Bei der Fraunhofer-Beugung liegt die Lichtquelle im Unendlichen, d.h. es werden parallele Strahlenbündel emittiert. Mathematisch ist der zweite Fall viel einfacher zu behandeln, auf die Fresnel-Beugung soll hier nicht weiter eingegangen.
 Der Länge des verwendete Spaltes beträgt ein Vielfaches der Breite, sodass nur ein eindimensionales Beugungsbild entsteht.
 Es fällt eine ebene Welle mit der Feldstärke
@@ -67,35 +72,11 @@ Um die Amplitude des in Richtung $\phi$ gebeugten Lichtes zu berechnen, muss man
 \end{equation}
 Aufgrund der infinitesimal kleinen Breiten der Strahlenbündel geht in der Berechnung der Amplitude die Summe in ein Integral über:
 \begin{equation}
-B (z, t, \phi) = A_0 \int_0^b {e^{i\left(wt-\frac{2 \pi z}{\lambda}+ \delta \right) } dx} = A_0 e^{i \left( wt- \frac{2 \pi z}{\lambda} \right)} \int_0^b {e^{\left( \frac{2 \pi i x \sin \phi}{\lambda} \right) }} dx.
+B (z, t, \phi) = A_0 
 \end{equation}
-Durch Integration und Ausklammern ergibt sich über die Eulersche Formel
-\begin{equation}
-\sin \alpha = \frac{\left( e^{i \alpha} - e^{-i \alpha} \right)}{2i}
-\end{equation}
-der folgende Ausdruck:
-\begin{equation}
-B (z,t,\phi) = A_0 e^{i\left( wt- \frac{2 \pi z}{\lambda}\right)} e^{\left( \frac{\pi i b \sin \phi}{\lambda}\right)} \frac{\lambda}{\pi \sin \phi} \sin \left( \frac{\pi b \sin \phi}{\lambda} \right).
-\label{formela}
-\end{equation}
-Die Intensität des am Einfachspalt gebeugten Lichtes wird beschrieben durch
-\begin{equation}
-I (\phi) \propto B (\phi)^2 = A_0^2 b^2 \left ( \frac {\lambda}{\pi b \sin \phi} \right) ^2 \cdot \sin^2 \left( \frac{\pi b \sin \phi}{\lambda} \right).
-\label{formeli}
-\end{equation}
-Die durch Formel (\ref{formeli}) beschriebene Beugungsfigur besitzt bei den Nulldurchgängen von Formel (\ref{formela}) Minima.
 \subsection{Beugung am Doppelspalt}
-Die Intensitätsverteilung I $(\phi)$ lässt sich analog zum Einfachspalt berechnen. Die Beugungsfigur des Doppelspaltes wird behandelt als Überlagerung zweier Einfachspalte, die den Abstand s zueinander besitzen.
-Für die Intensitätsverteilung ergibt sich
-\begin{equation}
-I (\phi) \propto B(\phi)^2 = 4 \cos^2 \left( \frac{\pi s \sin \phi}{\lambda} \right) \cdot \left( \frac{\lambda}{\pi b \sin \phi} \right)^2 \cdot \sin^2 \left( \frac{\pi b \sin \phi}{\lambda} \right).
-\end{equation}
-Diese Intensitätsverteilung wird berechnet auf Grundlage der Intensitätsverteilung des Einfachspaltes (Formel (\ref{formeli})) und einer $\cos^2$-Verteilung. Es ergeben sich zusätzliche Minima an den Stellen
-\begin{equation}
-\phi(k) = \arcsin \left( \frac{2k+1}{2s} \right) \cdot \lambda,
-\end{equation}
-also an den Nullstellen der $\cos^2$-Verteilung.
 \subsection{Fraunhofersche Beugung und Fourier-Transformation}
+
 Bei der Fraunhoferschen Beugung ist die Amplitudenverteilung auch auf allgemeine Weise möglich. B$(\phi)$ lässt sich als Fourier-Transformierte der Amplitudenverteilung der einfallenden Welle auffassen. Bei der Amplitudenverteilung handelt es sich hier um die Verteilung in der eugungsebene.
 \newline
 Die Fourier-Transformation formuliert das Huygenssche Prinzip mathematisch. Auch Beugung an zweidimensionalen Objekten lässt sich mit Hilfe der Fourier-Transformation einfach berechnen.
@@ -118,6 +99,8 @@ Bei dem ersten Einzelspalt ($b=\SI{0.075}{\milli \meter}$) soll dessen Beugungsf
 Anschließend wird ein weiterer Spalt ($b=\SI{0.15}{\milli \meter}$) vermessen. Die Schrittweite soll um das Hauptmaximum herum erhöht werden.
 \subsection{Messung am Doppelspalt}
 Der Doppelspalt ($b=\SI{0.15}{\milli \meter}, g=\SI{0.25}{\milli \meter}$) wird mit einer Schrittweite von $\SI{1}{\milli \meter}$ vermessen, um das Hauptmaximum herum wird die Schrittweite auf $\SI{0.2}{\milli \meter}$ verringert.
+
+
 \section{Auswertung}
 \subsection{Mikroskopische Vermessung der Spalte}
 Das in diesem Versuch zur Vermessung der Beugungsobjekte verwendete Mikroskop besitzt eine willkürlich unterteilte Skala. Daher muss dieses zunächst mit Hilfe eines Objektmikrometers geeicht werden. Als Umrechnungsfaktor $f$ ergibt sich:
@@ -175,7 +158,7 @@ An diese Werte wird nun die Formel
 \begin{equation}
 I(\varphi) = A_0^2b^2\operatorname{sinc}^2\left( \frac{b\cdot\sin{\varphi}}{\lambda}\right)
 \end{equation}
-Die Wellenlänge des verwendeten HeNe-Lasers beträgt
+angepasst. Die Wellenlänge des verwendeten HeNe-Lasers beträgt
 \[
 \lambda = \SI{633}{\nano\meter}\rm.
 \] 
@@ -184,9 +167,6 @@ Die nichtlineare Ausgleichsrechnung wurde mit \textsc{Python} durchgeführt. Fü
 A_0= \sqrt{\frac{I_{Max}}{b^2}}\rm.
 \] 
 Die Ergebnisse der Regression finden sich in Tabelle 3 und die Ausgleichsfunktionen sind in den Abbildungen zu finden.
-\subsection{Beugungsmuster am Doppelspalt}
-
-Die Berechnung des Photostroms $I_ph$ und des Beugungswinkels $\varphi$ wurden analog zum vorherigen Abschnitt durchgeführt. Die Ergebnisse befinden sich in Tabelle 4.
 \begin{table}[H]
 \centering
 \begin{tabular}{lSS}
@@ -194,13 +174,20 @@ Die Berechnung des Photostroms $I_ph$ und des Beugungswinkels $\varphi$ wurden a
 \toprule
 &$\frac{A_0}{\si{\nano\ampere\per\meter\squared}}$ &$\frac{g}{\si{\meter}}$\\
 \midrule
-Einzelspalt A & 1.9  &6.71e-5 \\
-Einzelspalt B & 3.8  &1.34e-4 \\
+Einzelspalt A & 3.3915+-0.0035 & 5.00e-05 \\
+Einzelspalt B & 6.291+-0.010 & 1.20e-04\\
 \bottomrule
 \end{tabular}
 \caption{Regressionsergebnisse der Einzelspalte}
 \end{table}
- Abbildung \ref{plot3} zeigt den Photostrom in Abhängigkeit von $\varphi$ 
+
+
+\subsection{Beugungsmuster am Doppelspalt}
+
+Die Berechnung des Photostroms $I_ph$ und des Beugungswinkels $\varphi$ wurden analog zum vorherigen Abschnitt durchgeführt. Die Ergebnisse befinden sich in Tabelle 4.
+
+\noindent
+Abbildung \ref{plot3} zeigt den Photostrom in Abhängigkeit von $\varphi$ 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.8]{plot2.png}
@@ -211,19 +198,24 @@ An diese Messwerte soll die Theoriefunktion
 \begin{equation}
 I(\varphi) = 4 \cdot A_0^2\cdot b^2\cos^2\left(\frac{\pi\cdot g \cdot \sin \varphi}{\lambda}\right)\cdot \operatorname{sinc}^2\left( \frac{b\cdot\sin{\varphi}}{\lambda}\right) 
 \end{equation}
-angepasst. Analog zum Vorgehen beim Einzelspalt werde als Startwerte für die Regressionsparameter $g$ und $b$ die mikroskopisch bestimmten Messergebnisse verwendet. Für den Amplitudenfaktor gilt:
+angepasst werden. Analog zum Vorgehen beim Einzelspalt werden als Startwerte für die Regressionsparameter $g$ und $b$ die mikroskopisch bestimmten Messergebnisse verwendet. Für den Amplitudenfaktor gilt:
 \[
 A_0 = \sqrt{\frac{I_{Max}}{4\cdot b^2}}\rm.
 \]
-Die Ergebnisse der Regression befinden sich in Tabelle 5. Um einen Vergleich zwischen Beugung am Einzel und am Doppelspalt zu ermöglichen zeigt Abbildung \ref{plot3} beide Beugungsmuster. Die Amplituden sind dabei jeweils auf das 0. Maximum normalisiert. 
+Durch die Regression wurden folgende Werte berechnet:
+\begin{itemize}
+\item $A_0 = \SI{5.36+-0.09}{\nano\ampere\per\meter}$
+\item $b = \SI{1.502e-4}{\meter}$
+\item $g = \SI{7.278e-4}{\meter}$
+\end{itemize}
+Um einen Vergleich zwischen Beugung am Einzel- und am Doppelspalt zu ermöglichen zeigt Abbildung \ref{plot3} beide Beugungsmuster. Die Amplituden sind dabei jeweils auf das 0. Maximum normalisiert. 
 \begin{figure}[htp]
 \centering
-\includegraphics[scale=0.8]{plot4.png}
+\includegraphics[scale=0.8]{/home/martin/Dokumente/SS14/Praktikum/V406/plot4.png}
 \caption{Vergleich zwischen Beugung am Doppelspalt und Beugung am Einzelspalt mit näherungsweise gleicher Spaltbreite $b$.}
 \label{plot3}
 \end{figure}
 
-\subsection{}
 \section{Diskussion}
 
 \section{Quellen}
