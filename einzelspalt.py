@@ -82,3 +82,8 @@ plt.plot(phi_single,theo_intensity_single, label ="Einzelspalt")
 plt.plot(phi,theo_intensity, label ="Doppelspalt")
 plt.legend()
 plt.savefig('plot4.png')
+
+
+# Vergleichende Ergebnisangabe
+
+
