@@ -86,4 +86,9 @@ plt.savefig('plot4.png')
 
 # Vergleichende Ergebnisangabe
 
-
+print "Abweichungen Mikroskop"
+b_theo  = np.array([7.5e-5,1.5e-4,1.5e-4])
+delta_b =(np.array(b)-b_theo)/b_theo
+print b
+print delta_b[0]-delta_b[1]
+print delta_b
