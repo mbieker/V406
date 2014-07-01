@@ -106,7 +106,7 @@ Eine Skizze des Versuchsaufbaus ist in Abbildung (\ref{abb2}) gezeigt.
 \caption{Versuchsaufbau [1]}
 \label{abb2}
 \end{figure}
-\noindent Auf einer Schiene mit Längenskala sind ein He-Ne-Laser, eine Halterung für den Spalt und die verschiebbare Photodiode befestigt. Der Laser leuchtet auf den Spalt, der zwischen dem Laser und der Photodiode befestigt ist. Die Photodiode kann mit einer Auflösung von $\SI{1/100}{\milli \meter}$ über eine Strecke von \SI{5}{\centi \meter} verschoben werden. Die Photodiode ist an einem empfindlichen Amperemeter angeschlossen.
+\noindent Auf einer Schiene mit Längenskala sind ein He-Ne-Laser, eine Halterung für den Spalt und die verschiebbare Photodiode befestigt. Der Laser leuchtet auf den Spalt, der zwischen dem Laser und der Photodiode befestigt ist. Die Photodiode kann mit einer Auflösung von $\SI{1/100}{\milli \meter}$ über eine Strecke von \SI{5}{\centi \meter} verschoben werden. Die Photodiode ist an einem empfindlichen Amperemeter angeschlossen. Der gemessene Photostrom ist proportional zur Lichtintensität am Beobachtungsort. Diese ist proportional zum Quadrat der Amplitude der elektro-magnetischen Welle.
 \newline
 Um die durch die Fraunhofer-Beugung beschriebene Interferenz paralleler Strahlen zu realisieren, wird die Beobachtungsebene in eine Entfernung verlegt, die sehr groß gegen die Spaltbreite ist. Die in Abbildung 1 dargestellte Sammellinse wird dann nicht mehr benötigt.
 \section{Durchführung}
@@ -190,7 +190,7 @@ Die Ergebnisse der Regression finden sich in Tabelle 2 und die Ausgleichsfunktio
 \sisetup{table-parse-only}
 \begin{tabular}{lSS}
 \toprule
-&$\frac{A_0}{\si{\nano\ampere\per\meter\squared}}$ &$\frac{g}{\si{\meter}}$\\
+&$\frac{A_0}{\si{\nano\ampere^{\frac{1}{2}} \meter^{-1}}}$ &$\frac{g}{\si{\meter}}$\\
 \midrule
 Einzelspalt A & 3.3915+-0.0035 & 4.99698199+-0.00000010e-05 \\
 Einzelspalt B & 6.291+-0.010 & 1.20148081+-0.00000005e-4\\
@@ -223,7 +223,7 @@ A_0 = \sqrt{\frac{I_{Max}}{4\cdot b^2}}\rm.
 \]
 Durch die Regression wurden folgende Werte berechnet:
 \begin{itemize}
-\item $A_0 = \SI{5.36+-0.09}{\nano\ampere\per\meter}$
+\item $A_0 = \SI{5.36+-0.09}{\nano\ampere^{\frac{1}{2}}\per\meter}$
 \item $b = \SI{1.5028086+-0.0000009e-4}{\meter}$
 \item $g = \SI{7.2779391+-0.0000006e-4}{\meter}$.
 \end{itemize}
@@ -237,7 +237,7 @@ Um einen Vergleich zwischen Beugung am Einzel- und am Doppelspalt zu ermögliche
 
 \section{Diskussion}
 
-Beim Vergleich der Intensitätsverteilungen am Einfach- und Doppelspalt ist erkennbar, dass die Kurven nicht genau übereinander liegen. Dies deutet darauf hin, dass die Breite des Einzelspalts nicht der Breite des Doppelspalts entspricht. Die mikroskopische Messung wird dies bestätigen. In Tabelle 3 sind die Ergebnisse für die Spaltbreiten und den Spaltabstand beim Doppelspalt sowie deren Herstellerangaben dargestellt. Um die Messmethoden zu vergleichen, werden die relativen Abweichungen der Messwerte zur Herstellerangabe berechnet.
+Beim Vergleich der Intensitätsverteilungen am Einfach- und Doppelspalt ist erkennbar, dass die Kurven nicht genau übereinander liegen. Dies deutet darauf hin, dass die Breite des Einzelspalts nicht der Breite des Doppelspalts entspricht. Die mikroskopische Messung bestätigt dies. In Tabelle 3 sind die Ergebnisse für die Spaltbreiten und den Spaltabstand beim Doppelspalt sowie deren Herstellerangaben dargestellt. Um die Messmethoden zu vergleichen, werden die relativen Abweichungen der Messwerte zur Herstellerangabe berechnet.
 
 
 \begin{table}[H]
@@ -260,7 +260,7 @@ $\rightarrow$ Abweichung von der HA &\SI{33.37}{\percent}&\SI{19.90}{\percent}&\
 \caption{Vergleichende Ergebnistabelle mit rel. Abweichungen von den Herstellerangaben}
 \end{table}
 \noindent
-Bei der Vermessung der Spaltbreiten liegt die relative Abweichung der mit dem Mikroskop ermittelten Werte jeweils bei ca. $\SI{10}{\percent}$. Dabei könnte es sich um einen systematischen Fehler handeln, entstanden z.B. bei der Kalibrierung des Mikroskopes. Bei der Messung von $b$ durch den Messaufbau liegen die relativen Abweichungen bei bis zu $\SI{33.37}{\percent}$, dafür ist die Messung der Spaltbreite am Doppelspalt mit einer relativen Abweichung von nur $\SI{0.19}{\percent}$ sehr genau.\newline
+Bei der Vermessung der Spaltbreiten liegt die relative Abweichung der mit dem Mikroskop ermittelten Werte bei jeweils ca. $\SI{10}{\percent}$. Dabei könnte es sich um einen systematischen Fehler handeln, entstanden z.B. bei der Kalibrierung des Mikroskopes. Bei der Messung von $b$ durch den Messaufbau liegen die relativen Abweichungen bei bis zu $\SI{33.37}{\percent}$, dafür ist die Messung der Spaltbreite am Doppelspalt mit einer relativen Abweichung von nur $\SI{0.19}{\percent}$ sehr genau.\newline
 Die Messungen des Spaltabstandes $g$ ergaben einen ähnlichen Wert, dieser beträgt aber fast das Dreifache der Herstellerangabe. Aufgrund der Übereinstimmung der Ergebnisse ist zu vermuten, dass die Herstellerangabe auf dem Dia des Doppelspaltes nicht richtig ist.
 \newline
 Zusammenfassend lässt sich feststellen, dass mit dem Versuchsaufbau zwar sehr genaue Messungen der Spaltbreite möglich sind, der Versuchsaufbau aber viel aufwändiger und empfindlicher ist als das Mikroskop. Die große Empfindlichkeit des Versuchsaufbaus ist besonders bei der ersten Messung erkennbar. So wird die Messung zum Beispiel durch Restlicht, welches in die Photodiode einfällt, erheblich gestört. Auch kleine Erschütterungen können die Messung sehr stark beinflussen. 
